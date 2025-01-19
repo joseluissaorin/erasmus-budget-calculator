@@ -4,9 +4,10 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { ScholarshipConfig } from '../types';
+import type { ScholarshipConfig } from '../types';
 
 interface ScholarshipConfigProps {
   config: ScholarshipConfig;
@@ -74,7 +75,7 @@ export function ScholarshipConfig({
               max={duration}
             />
             {config.maxMonths > duration && (
-              <Alert variant="warning">
+              <Alert variant="destructive">
                 <AlertDescription>
                   Maximum funded months cannot exceed total stay duration.
                 </AlertDescription>

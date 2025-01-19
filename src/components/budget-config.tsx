@@ -2,21 +2,21 @@
 "use client"
 
 import React, { useEffect, useState, useCallback } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { Slider } from '@/components/ui/slider';
-import { Switch } from '@/components/ui/switch';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Label } from '../components/ui/label';
+import { Input } from '../components/ui/input';
+import { Slider } from '../components/ui/slider';
+import { Switch } from '../components/ui/switch';
+import { Alert, AlertDescription } from '../components/ui/alert';
+import { Button } from '../components/ui/button';
 import { ReloadIcon } from '@radix-ui/react-icons';
 import { BudgetParameters, City, ExpenseParameter, CostItem } from '../types';
 import { useIndexedDB } from '@/hooks/useIndexedDB';
-import { createDefaultBudgetParameters } from '@/lib/defaults';
+import { createDefaultBudgetParameters } from '../lib/defaults';
 import { ErrorBoundary } from './error-boundary';
-import { isValidBudgetParameters, validateBudgetParameters } from '@/lib/validation';
-import { EXPENSE_COLORS, EXPENSE_BACKGROUNDS, EXPENSE_TEXT_COLORS } from '@/lib/constants';
-import { cn } from '@/lib/utils';
+import { isValidBudgetParameters, validateBudgetParameters } from '../lib/validation';
+import { EXPENSE_COLORS, EXPENSE_BACKGROUNDS, EXPENSE_TEXT_COLORS } from '../lib/constants';
+import { cn } from '../lib/utils';
 
 interface BudgetConfigProps {
   params: BudgetParameters;

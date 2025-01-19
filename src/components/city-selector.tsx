@@ -19,7 +19,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
 import { City, NormalizedCity } from '@/types';
 import { useIndexedDB } from '@/hooks/useIndexedDB';
 import citiesData from '@/data/cities.json';
@@ -116,7 +115,7 @@ export function CitySelector({ selectedCity, onSelectCity, loading: externalLoad
                     {recentCities.map((city) => (
                       <CommandItem
                         key={city.id}
-                        value={`${city.name}-${city.country}`}
+                        value={city.id}
                         onSelect={() => handleSelect(city)}
                       >
                         <Check
@@ -136,7 +135,7 @@ export function CitySelector({ selectedCity, onSelectCity, loading: externalLoad
                     return (
                       <CommandItem
                         key={normalizedCity.id}
-                        value={`${normalizedCity.name}-${normalizedCity.country}`}
+                        value={normalizedCity.id}
                         onSelect={() => handleSelect(normalizedCity)}
                       >
                         <Check

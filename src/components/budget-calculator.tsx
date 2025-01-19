@@ -35,7 +35,7 @@ const defaultBudgetParams: BudgetParameters = {
   other: { amount: 0, isShared: false }
 };
 
-export default function BudgetCalculator() {
+export function BudgetCalculator() {
   const [selectedCity, setSelectedCity] = useState<City | null>(null);
   const [budgetParams, setBudgetParams] = useState<BudgetParameters>(defaultBudgetParams);
   const [scholarship, setScholarship] = useState<ScholarshipConfig>({

@@ -1,7 +1,7 @@
 // components/ExpensesSummary.tsx
 
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 import { BudgetParameters, City, CityResponse, Flight, ScholarshipConfig, ExchangeRate } from '../types';
 

@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from '../components/ui/button';
 import { Share2, Check, Copy } from 'lucide-react';
-import { encodeState } from '@/utils/url-state';
-import { BudgetParameters, ScholarshipConfig, Flight, City } from '@/types';
+import { encodeState } from '../utils/url-state';
+import { BudgetParameters, ScholarshipConfig, Flight, City } from '../types';
 
 interface ShareButtonProps {
   city: City | null;
