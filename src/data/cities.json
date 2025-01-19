@@ -1,0 +1,1477 @@
+[
+  {
+    "id": "austria-graz",
+    "country": "Austria",
+    "city": "Graz"
+  },
+  {
+    "id": "austria-linz",
+    "country": "Austria",
+    "city": "Linz"
+  },
+  {
+    "id": "austria-vienna",
+    "country": "Austria",
+    "city": "Vienna"
+  },
+  {
+    "id": "belgium-antwerpen",
+    "country": "Belgium",
+    "city": "Antwerpen"
+  },
+  {
+    "id": "belgium-brugge",
+    "country": "Belgium",
+    "city": "Brugge"
+  },
+  {
+    "id": "belgium-bruxelles",
+    "country": "Belgium",
+    "city": "Bruxelles"
+  },
+  {
+    "id": "belgium-hasselt-/-limburg",
+    "country": "Belgium",
+    "city": "Hasselt / Limburg"
+  },
+  {
+    "id": "belgium-kortrijk-bruges",
+    "country": "Belgium",
+    "city": "Kortrijk-bruges"
+  },
+  {
+    "id": "belgium-leuven",
+    "country": "Belgium",
+    "city": "Leuven"
+  },
+  {
+    "id": "belgium-liege",
+    "country": "Belgium",
+    "city": "Liege"
+  },
+  {
+    "id": "belgium-liége",
+    "country": "Belgium",
+    "city": "Liége"
+  },
+  {
+    "id": "belgium-mons",
+    "country": "Belgium",
+    "city": "Mons"
+  },
+  {
+    "id": "belgium-namur",
+    "country": "Belgium",
+    "city": "Namur"
+  },
+  {
+    "id": "bulgaria-blagoevgrad",
+    "country": "Bulgaria",
+    "city": "Blagoevgrad"
+  },
+  {
+    "id": "bulgaria-rousse",
+    "country": "Bulgaria",
+    "city": "Rousse"
+  },
+  {
+    "id": "bulgaria-sofia",
+    "country": "Bulgaria",
+    "city": "Sofia"
+  },
+  {
+    "id": "bulgaria-varna",
+    "country": "Bulgaria",
+    "city": "Varna"
+  },
+  {
+    "id": "bulgaria-veliko-turnovo",
+    "country": "Bulgaria",
+    "city": "Veliko-turnovo"
+  },
+  {
+    "id": "croatia-koprivnica",
+    "country": "Croatia",
+    "city": "Koprivnica"
+  },
+  {
+    "id": "croatia-osijek",
+    "country": "Croatia",
+    "city": "Osijek"
+  },
+  {
+    "id": "croatia-pula",
+    "country": "Croatia",
+    "city": "Pula"
+  },
+  {
+    "id": "croatia-rijeka",
+    "country": "Croatia",
+    "city": "Rijeka"
+  },
+  {
+    "id": "croatia-split",
+    "country": "Croatia",
+    "city": "Split"
+  },
+  {
+    "id": "croatia-zagreb",
+    "country": "Croatia",
+    "city": "Zagreb"
+  },
+  {
+    "id": "czech-republic-brno",
+    "country": "Czech Republic",
+    "city": "Brno"
+  },
+  {
+    "id": "czech-republic-české-budějovice",
+    "country": "Czech Republic",
+    "city": "České Budějovice"
+  },
+  {
+    "id": "czech-republic-hradec-kralove",
+    "country": "Czech Republic",
+    "city": "Hradec Kralove"
+  },
+  {
+    "id": "czech-republic-liberec",
+    "country": "Czech Republic",
+    "city": "Liberec"
+  },
+  {
+    "id": "czech-republic-masaryk",
+    "country": "Czech Republic",
+    "city": "Masaryk"
+  },
+  {
+    "id": "czech-republic-olomouci",
+    "country": "Czech Republic",
+    "city": "Olomouci"
+  },
+  {
+    "id": "czech-republic-opava",
+    "country": "Czech Republic",
+    "city": "Opava"
+  },
+  {
+    "id": "czech-republic-ostrava",
+    "country": "Czech Republic",
+    "city": "Ostrava"
+  },
+  {
+    "id": "czech-republic-pardubice",
+    "country": "Czech Republic",
+    "city": "Pardubice"
+  },
+  {
+    "id": "czech-republic-prague",
+    "country": "Czech Republic",
+    "city": "Prague"
+  },
+  {
+    "id": "czech-republic-zlin",
+    "country": "Czech Republic",
+    "city": "Zlin"
+  },
+  {
+    "id": "denmark-aarhus",
+    "country": "Denmark",
+    "city": "Aarhus"
+  },
+  {
+    "id": "denmark-copenhagen",
+    "country": "Denmark",
+    "city": "Copenhagen"
+  },
+  {
+    "id": "denmark-odense",
+    "country": "Denmark",
+    "city": "Odense"
+  },
+  {
+    "id": "denmark-roskilde",
+    "country": "Denmark",
+    "city": "Roskilde"
+  },
+  {
+    "id": "estonia-tallinn",
+    "country": "Estonia",
+    "city": "Tallinn"
+  },
+  {
+    "id": "estonia-tartu",
+    "country": "Estonia",
+    "city": "Tartu"
+  },
+  {
+    "id": "finland-abo",
+    "country": "Finland",
+    "city": "Abo"
+  },
+  {
+    "id": "finland-aland",
+    "country": "Finland",
+    "city": "Aland"
+  },
+  {
+    "id": "finland-joensuu",
+    "country": "Finland",
+    "city": "Joensuu"
+  },
+  {
+    "id": "finland-jyväskylä",
+    "country": "Finland",
+    "city": "Jyväskylä"
+  },
+  {
+    "id": "finland-kuopio",
+    "country": "Finland",
+    "city": "Kuopio"
+  },
+  {
+    "id": "finland-lapland",
+    "country": "Finland",
+    "city": "Lapland"
+  },
+  {
+    "id": "finland-oulu",
+    "country": "Finland",
+    "city": "Oulu"
+  },
+  {
+    "id": "finland-pori",
+    "country": "Finland",
+    "city": "Pori"
+  },
+  {
+    "id": "finland-seinäjoki",
+    "country": "Finland",
+    "city": "Seinäjoki"
+  },
+  {
+    "id": "finland-tampere",
+    "country": "Finland",
+    "city": "Tampere"
+  },
+  {
+    "id": "france-annecy",
+    "country": "France",
+    "city": "Annecy"
+  },
+  {
+    "id": "france-antilles-et-guyane",
+    "country": "France",
+    "city": "Antilles Et Guyane"
+  },
+  {
+    "id": "france-besançon",
+    "country": "France",
+    "city": "Besançon"
+  },
+  {
+    "id": "france-bordeaux",
+    "country": "France",
+    "city": "Bordeaux"
+  },
+  {
+    "id": "france-bourges",
+    "country": "France",
+    "city": "Bourges"
+  },
+  {
+    "id": "france-brest",
+    "country": "France",
+    "city": "Brest"
+  },
+  {
+    "id": "france-caen",
+    "country": "France",
+    "city": "Caen"
+  },
+  {
+    "id": "france-cayenne-(guayana-francesa)",
+    "country": "France",
+    "city": "Cayenne (guayana Francesa)"
+  },
+  {
+    "id": "france-cergy",
+    "country": "France",
+    "city": "Cergy"
+  },
+  {
+    "id": "france-chambery",
+    "country": "France",
+    "city": "Chambery"
+  },
+  {
+    "id": "france-clermont-ferrand",
+    "country": "France",
+    "city": "Clermont-ferrand"
+  },
+  {
+    "id": "france-dijon",
+    "country": "France",
+    "city": "Dijon"
+  },
+  {
+    "id": "france-grenoble",
+    "country": "France",
+    "city": "Grenoble"
+  },
+  {
+    "id": "france-la-reunion",
+    "country": "France",
+    "city": "La Reunion"
+  },
+  {
+    "id": "france-la-rochelle",
+    "country": "France",
+    "city": "La Rochelle"
+  },
+  {
+    "id": "france-lille",
+    "country": "France",
+    "city": "Lille"
+  },
+  {
+    "id": "france-limoges",
+    "country": "France",
+    "city": "Limoges"
+  },
+  {
+    "id": "france-lyon",
+    "country": "France",
+    "city": "Lyon"
+  },
+  {
+    "id": "france-marseille",
+    "country": "France",
+    "city": "Marseille"
+  },
+  {
+    "id": "france-montpellier",
+    "country": "France",
+    "city": "Montpellier"
+  },
+  {
+    "id": "france-nantes",
+    "country": "France",
+    "city": "Nantes"
+  },
+  {
+    "id": "france-paris",
+    "country": "France",
+    "city": "Paris"
+  },
+  {
+    "id": "france-perpignan",
+    "country": "France",
+    "city": "Perpignan"
+  },
+  {
+    "id": "france-pointe-à-pitre-(cedex)-guadeloupe",
+    "country": "France",
+    "city": "Pointe À Pitre (cedex) Guadeloupe"
+  },
+  {
+    "id": "france-pointe_a_pitre",
+    "country": "France",
+    "city": "Pointe_a_pitre"
+  },
+  {
+    "id": "france-poitiers",
+    "country": "France",
+    "city": "Poitiers"
+  },
+  {
+    "id": "france-rouen",
+    "country": "France",
+    "city": "Rouen"
+  },
+  {
+    "id": "france-strasbourg",
+    "country": "France",
+    "city": "Strasbourg"
+  },
+  {
+    "id": "france-toulouse",
+    "country": "France",
+    "city": "Toulouse"
+  },
+  {
+    "id": "france-tours",
+    "country": "France",
+    "city": "Tours"
+  },
+  {
+    "id": "germany-alfter",
+    "country": "Germany",
+    "city": "Alfter"
+  },
+  {
+    "id": "germany-berlín",
+    "country": "Germany",
+    "city": "Berlín"
+  },
+  {
+    "id": "germany-bielefeld",
+    "country": "Germany",
+    "city": "Bielefeld"
+  },
+  {
+    "id": "germany-bochum",
+    "country": "Germany",
+    "city": "Bochum"
+  },
+  {
+    "id": "germany-bonn",
+    "country": "Germany",
+    "city": "Bonn"
+  },
+  {
+    "id": "germany-bremen",
+    "country": "Germany",
+    "city": "Bremen"
+  },
+  {
+    "id": "germany-bremerhaven",
+    "country": "Germany",
+    "city": "Bremerhaven"
+  },
+  {
+    "id": "germany-bruhl",
+    "country": "Germany",
+    "city": "Bruhl"
+  },
+  {
+    "id": "germany-chemnitz",
+    "country": "Germany",
+    "city": "Chemnitz"
+  },
+  {
+    "id": "germany-cologne",
+    "country": "Germany",
+    "city": "Cologne"
+  },
+  {
+    "id": "germany-deggendorf",
+    "country": "Germany",
+    "city": "Deggendorf"
+  },
+  {
+    "id": "germany-dresden",
+    "country": "Germany",
+    "city": "Dresden"
+  },
+  {
+    "id": "germany-dusseldorf",
+    "country": "Germany",
+    "city": "Dusseldorf"
+  },
+  {
+    "id": "germany-eichstatt",
+    "country": "Germany",
+    "city": "Eichstatt"
+  },
+  {
+    "id": "germany-elmshorn",
+    "country": "Germany",
+    "city": "Elmshorn"
+  },
+  {
+    "id": "germany-emden",
+    "country": "Germany",
+    "city": "Emden"
+  },
+  {
+    "id": "germany-erfurt",
+    "country": "Germany",
+    "city": "Erfurt"
+  },
+  {
+    "id": "germany-erlanger",
+    "country": "Germany",
+    "city": "Erlanger"
+  },
+  {
+    "id": "germany-flensburg",
+    "country": "Germany",
+    "city": "Flensburg"
+  },
+  {
+    "id": "germany-frankfurt",
+    "country": "Germany",
+    "city": "Frankfurt"
+  },
+  {
+    "id": "germany-frankfurt-am-main",
+    "country": "Germany",
+    "city": "Frankfurt Am Main"
+  },
+  {
+    "id": "germany-frankfurt-am-oder",
+    "country": "Germany",
+    "city": "Frankfurt Am Oder"
+  },
+  {
+    "id": "germany-freiburg",
+    "country": "Germany",
+    "city": "Freiburg"
+  },
+  {
+    "id": "germany-freisin",
+    "country": "Germany",
+    "city": "Freisin"
+  },
+  {
+    "id": "germany-fulda",
+    "country": "Germany",
+    "city": "Fulda"
+  },
+  {
+    "id": "germany-gottingen",
+    "country": "Germany",
+    "city": "Gottingen"
+  },
+  {
+    "id": "germany-göttingen",
+    "country": "Germany",
+    "city": "Göttingen"
+  },
+  {
+    "id": "germany-greifswald",
+    "country": "Germany",
+    "city": "Greifswald"
+  },
+  {
+    "id": "germany-hagen",
+    "country": "Germany",
+    "city": "Hagen"
+  },
+  {
+    "id": "germany-halle",
+    "country": "Germany",
+    "city": "Halle"
+  },
+  {
+    "id": "germany-hamburg",
+    "country": "Germany",
+    "city": "Hamburg"
+  },
+  {
+    "id": "germany-hannover",
+    "country": "Germany",
+    "city": "Hannover"
+  },
+  {
+    "id": "germany-hegen",
+    "country": "Germany",
+    "city": "Hegen"
+  },
+  {
+    "id": "germany-heidelberg",
+    "country": "Germany",
+    "city": "Heidelberg"
+  },
+  {
+    "id": "germany-hildesheim",
+    "country": "Germany",
+    "city": "Hildesheim"
+  },
+  {
+    "id": "germany-hildeshiem",
+    "country": "Germany",
+    "city": "Hildeshiem"
+  },
+  {
+    "id": "germany-kaiserslautern",
+    "country": "Germany",
+    "city": "Kaiserslautern"
+  },
+  {
+    "id": "germany-karlsruhe",
+    "country": "Germany",
+    "city": "Karlsruhe"
+  },
+  {
+    "id": "germany-kempten",
+    "country": "Germany",
+    "city": "Kempten"
+  },
+  {
+    "id": "germany-kiel",
+    "country": "Germany",
+    "city": "Kiel"
+  },
+  {
+    "id": "germany-kleve",
+    "country": "Germany",
+    "city": "Kleve"
+  },
+  {
+    "id": "germany-koblenz-landau",
+    "country": "Germany",
+    "city": "Koblenz-landau"
+  },
+  {
+    "id": "germany-konstanz",
+    "country": "Germany",
+    "city": "Konstanz"
+  },
+  {
+    "id": "germany-landshut",
+    "country": "Germany",
+    "city": "Landshut"
+  },
+  {
+    "id": "germany-leipzig",
+    "country": "Germany",
+    "city": "Leipzig"
+  },
+  {
+    "id": "germany-ludwigsburg",
+    "country": "Germany",
+    "city": "Ludwigsburg"
+  },
+  {
+    "id": "germany-magdeburg",
+    "country": "Germany",
+    "city": "Magdeburg"
+  },
+  {
+    "id": "germany-mainz",
+    "country": "Germany",
+    "city": "Mainz"
+  },
+  {
+    "id": "germany-mannheim",
+    "country": "Germany",
+    "city": "Mannheim"
+  },
+  {
+    "id": "germany-marburg",
+    "country": "Germany",
+    "city": "Marburg"
+  },
+  {
+    "id": "germany-margurgo",
+    "country": "Germany",
+    "city": "Margurgo"
+  },
+  {
+    "id": "germany-merseburg",
+    "country": "Germany",
+    "city": "Merseburg"
+  },
+  {
+    "id": "germany-munich",
+    "country": "Germany",
+    "city": "Munich"
+  },
+  {
+    "id": "germany-munster",
+    "country": "Germany",
+    "city": "Munster"
+  },
+  {
+    "id": "germany-münster",
+    "country": "Germany",
+    "city": "Münster"
+  },
+  {
+    "id": "germany-nurnberg",
+    "country": "Germany",
+    "city": "Nurnberg"
+  },
+  {
+    "id": "germany-osnabruck",
+    "country": "Germany",
+    "city": "Osnabruck"
+  },
+  {
+    "id": "germany-paderborn",
+    "country": "Germany",
+    "city": "Paderborn"
+  },
+  {
+    "id": "germany-passau",
+    "country": "Germany",
+    "city": "Passau"
+  },
+  {
+    "id": "germany-potsdam",
+    "country": "Germany",
+    "city": "Potsdam"
+  },
+  {
+    "id": "germany-rostock",
+    "country": "Germany",
+    "city": "Rostock"
+  },
+  {
+    "id": "germany-saarbrucken",
+    "country": "Germany",
+    "city": "Saarbrucken"
+  },
+  {
+    "id": "germany-trier",
+    "country": "Germany",
+    "city": "Trier"
+  },
+  {
+    "id": "germany-tübingen",
+    "country": "Germany",
+    "city": "Tübingen"
+  },
+  {
+    "id": "germany-ulm",
+    "country": "Germany",
+    "city": "Ulm"
+  },
+  {
+    "id": "germany-würzburg",
+    "country": "Germany",
+    "city": "Würzburg"
+  },
+  {
+    "id": "greece-athens",
+    "country": "Greece",
+    "city": "Athens"
+  },
+  {
+    "id": "greece-chania",
+    "country": "Greece",
+    "city": "Chania"
+  },
+  {
+    "id": "greece-epirus",
+    "country": "Greece",
+    "city": "Epirus"
+  },
+  {
+    "id": "greece-ioannina",
+    "country": "Greece",
+    "city": "Ioannina"
+  },
+  {
+    "id": "greece-mytilene",
+    "country": "Greece",
+    "city": "Mytilene"
+  },
+  {
+    "id": "greece-patras",
+    "country": "Greece",
+    "city": "Patras"
+  },
+  {
+    "id": "greece-rethymno",
+    "country": "Greece",
+    "city": "Rethymno"
+  },
+  {
+    "id": "greece-thessaloniki",
+    "country": "Greece",
+    "city": "Thessaloniki"
+  },
+  {
+    "id": "hungary-sopron",
+    "country": "Hungary",
+    "city": "Sopron"
+  },
+  {
+    "id": "hungary-szeged",
+    "country": "Hungary",
+    "city": "Szeged"
+  },
+  {
+    "id": "ireland-cork",
+    "country": "Ireland",
+    "city": "Cork"
+  },
+  {
+    "id": "ireland-dublin",
+    "country": "Ireland",
+    "city": "Dublin"
+  },
+  {
+    "id": "ireland-limerick",
+    "country": "Ireland",
+    "city": "Limerick"
+  },
+  {
+    "id": "ireland-maynooth",
+    "country": "Ireland",
+    "city": "Maynooth"
+  },
+  {
+    "id": "italy-ancona",
+    "country": "Italy",
+    "city": "Ancona"
+  },
+  {
+    "id": "italy-bergamo",
+    "country": "Italy",
+    "city": "Bergamo"
+  },
+  {
+    "id": "italy-bologna",
+    "country": "Italy",
+    "city": "Bologna"
+  },
+  {
+    "id": "italy-cagliari",
+    "country": "Italy",
+    "city": "Cagliari"
+  },
+  {
+    "id": "italy-camerino",
+    "country": "Italy",
+    "city": "Camerino"
+  },
+  {
+    "id": "italy-carrara",
+    "country": "Italy",
+    "city": "Carrara"
+  },
+  {
+    "id": "italy-caserta",
+    "country": "Italy",
+    "city": "Caserta"
+  },
+  {
+    "id": "italy-catania",
+    "country": "Italy",
+    "city": "Catania"
+  },
+  {
+    "id": "italy-chieti",
+    "country": "Italy",
+    "city": "Chieti"
+  },
+  {
+    "id": "italy-cosenza",
+    "country": "Italy",
+    "city": "Cosenza"
+  },
+  {
+    "id": "italy-enna",
+    "country": "Italy",
+    "city": "Enna"
+  },
+  {
+    "id": "italy-fisciano",
+    "country": "Italy",
+    "city": "Fisciano"
+  },
+  {
+    "id": "italy-florence",
+    "country": "Italy",
+    "city": "Florence"
+  },
+  {
+    "id": "italy-foggia",
+    "country": "Italy",
+    "city": "Foggia"
+  },
+  {
+    "id": "italy-frosinone",
+    "country": "Italy",
+    "city": "Frosinone"
+  },
+  {
+    "id": "italy-genova",
+    "country": "Italy",
+    "city": "Genova"
+  },
+  {
+    "id": "italy-l´aquila",
+    "country": "Italy",
+    "city": "L´aquila"
+  },
+  {
+    "id": "italy-lecce",
+    "country": "Italy",
+    "city": "Lecce"
+  },
+  {
+    "id": "italy-messina",
+    "country": "Italy",
+    "city": "Messina"
+  },
+  {
+    "id": "italy-milan",
+    "country": "Italy",
+    "city": "Milan"
+  },
+  {
+    "id": "italy-modena",
+    "country": "Italy",
+    "city": "Modena"
+  },
+  {
+    "id": "italy-naples",
+    "country": "Italy",
+    "city": "Naples"
+  },
+  {
+    "id": "italy-padua",
+    "country": "Italy",
+    "city": "Padua"
+  },
+  {
+    "id": "italy-palermo",
+    "country": "Italy",
+    "city": "Palermo"
+  },
+  {
+    "id": "italy-parma",
+    "country": "Italy",
+    "city": "Parma"
+  },
+  {
+    "id": "italy-pavia",
+    "country": "Italy",
+    "city": "Pavia"
+  },
+  {
+    "id": "italy-perugia",
+    "country": "Italy",
+    "city": "Perugia"
+  },
+  {
+    "id": "italy-pisa",
+    "country": "Italy",
+    "city": "Pisa"
+  },
+  {
+    "id": "italy-potenza",
+    "country": "Italy",
+    "city": "Potenza"
+  },
+  {
+    "id": "italy-ravenna",
+    "country": "Italy",
+    "city": "Ravenna"
+  },
+  {
+    "id": "italy-rome",
+    "country": "Italy",
+    "city": "Rome"
+  },
+  {
+    "id": "italy-salerno",
+    "country": "Italy",
+    "city": "Salerno"
+  },
+  {
+    "id": "italy-sassari",
+    "country": "Italy",
+    "city": "Sassari"
+  },
+  {
+    "id": "italy-siena",
+    "country": "Italy",
+    "city": "Siena"
+  },
+  {
+    "id": "italy-teramo",
+    "country": "Italy",
+    "city": "Teramo"
+  },
+  {
+    "id": "italy-trieste",
+    "country": "Italy",
+    "city": "Trieste"
+  },
+  {
+    "id": "italy-turin",
+    "country": "Italy",
+    "city": "Turin"
+  },
+  {
+    "id": "italy-urbino",
+    "country": "Italy",
+    "city": "Urbino"
+  },
+  {
+    "id": "italy-varese",
+    "country": "Italy",
+    "city": "Varese"
+  },
+  {
+    "id": "italy-vercelli",
+    "country": "Italy",
+    "city": "Vercelli"
+  },
+  {
+    "id": "italy-verona",
+    "country": "Italy",
+    "city": "Verona"
+  },
+  {
+    "id": "italy-viterbo",
+    "country": "Italy",
+    "city": "Viterbo"
+  },
+  {
+    "id": "latvia-rezekne",
+    "country": "Latvia",
+    "city": "Rezekne"
+  },
+  {
+    "id": "latvia-rëzeknes",
+    "country": "Latvia",
+    "city": "Rëzeknes"
+  },
+  {
+    "id": "latvia-riga",
+    "country": "Latvia",
+    "city": "Riga"
+  },
+  {
+    "id": "latvia-valmiera",
+    "country": "Latvia",
+    "city": "Valmiera"
+  },
+  {
+    "id": "lithuania-kaunas",
+    "country": "Lithuania",
+    "city": "Kaunas"
+  },
+  {
+    "id": "lithuania-klaipeda",
+    "country": "Lithuania",
+    "city": "Klaipeda"
+  },
+  {
+    "id": "lithuania-marijampolé",
+    "country": "Lithuania",
+    "city": "Marijampolé"
+  },
+  {
+    "id": "lithuania-vilnius",
+    "country": "Lithuania",
+    "city": "Vilnius"
+  },
+  {
+    "id": "netherlands-breda",
+    "country": "Netherlands",
+    "city": "Breda"
+  },
+  {
+    "id": "netherlands-groningen",
+    "country": "Netherlands",
+    "city": "Groningen"
+  },
+  {
+    "id": "netherlands-heerlen",
+    "country": "Netherlands",
+    "city": "Heerlen"
+  },
+  {
+    "id": "netherlands-hengelo",
+    "country": "Netherlands",
+    "city": "Hengelo"
+  },
+  {
+    "id": "netherlands-nijmegen",
+    "country": "Netherlands",
+    "city": "Nijmegen"
+  },
+  {
+    "id": "north-macedonia-stip",
+    "country": "North Macedonia",
+    "city": "Stip"
+  },
+  {
+    "id": "norway-trondheim",
+    "country": "Norway",
+    "city": "Trondheim"
+  },
+  {
+    "id": "poland-bialystok",
+    "country": "Poland",
+    "city": "Bialystok"
+  },
+  {
+    "id": "poland-bydgoszcz",
+    "country": "Poland",
+    "city": "Bydgoszcz"
+  },
+  {
+    "id": "poland-gdańsk",
+    "country": "Poland",
+    "city": "Gdańsk"
+  },
+  {
+    "id": "poland-gdynia",
+    "country": "Poland",
+    "city": "Gdynia"
+  },
+  {
+    "id": "poland-katowice",
+    "country": "Poland",
+    "city": "Katowice"
+  },
+  {
+    "id": "poland-kielce",
+    "country": "Poland",
+    "city": "Kielce"
+  },
+  {
+    "id": "poland-konin",
+    "country": "Poland",
+    "city": "Konin"
+  },
+  {
+    "id": "poland-kraków",
+    "country": "Poland",
+    "city": "Kraków"
+  },
+  {
+    "id": "poland-krosno",
+    "country": "Poland",
+    "city": "Krosno"
+  },
+  {
+    "id": "poland-legnica",
+    "country": "Poland",
+    "city": "Legnica"
+  },
+  {
+    "id": "poland-łódź",
+    "country": "Poland",
+    "city": "Łódź"
+  },
+  {
+    "id": "poland-lublin",
+    "country": "Poland",
+    "city": "Lublin"
+  },
+  {
+    "id": "poland-lublinie",
+    "country": "Poland",
+    "city": "Lublinie"
+  },
+  {
+    "id": "poland-opole",
+    "country": "Poland",
+    "city": "Opole"
+  },
+  {
+    "id": "poland-plock",
+    "country": "Poland",
+    "city": "Plock"
+  },
+  {
+    "id": "poland-poznan",
+    "country": "Poland",
+    "city": "Poznan"
+  },
+  {
+    "id": "poland-sanok",
+    "country": "Poland",
+    "city": "Sanok"
+  },
+  {
+    "id": "poland-szczecin",
+    "country": "Poland",
+    "city": "Szczecin"
+  },
+  {
+    "id": "poland-torun",
+    "country": "Poland",
+    "city": "Torun"
+  },
+  {
+    "id": "poland-warsaw",
+    "country": "Poland",
+    "city": "Warsaw"
+  },
+  {
+    "id": "poland-wloclawek",
+    "country": "Poland",
+    "city": "Wloclawek"
+  },
+  {
+    "id": "poland-wrocław",
+    "country": "Poland",
+    "city": "Wrocław"
+  },
+  {
+    "id": "portugal-angra-do-heroismo",
+    "country": "Portugal",
+    "city": "Angra Do Heroismo"
+  },
+  {
+    "id": "portugal-aveiro",
+    "country": "Portugal",
+    "city": "Aveiro"
+  },
+  {
+    "id": "portugal-barcelos",
+    "country": "Portugal",
+    "city": "Barcelos"
+  },
+  {
+    "id": "portugal-beja",
+    "country": "Portugal",
+    "city": "Beja"
+  },
+  {
+    "id": "portugal-braga",
+    "country": "Portugal",
+    "city": "Braga"
+  },
+  {
+    "id": "portugal-bragança",
+    "country": "Portugal",
+    "city": "Bragança"
+  },
+  {
+    "id": "portugal-braganza",
+    "country": "Portugal",
+    "city": "Braganza"
+  },
+  {
+    "id": "portugal-caparica",
+    "country": "Portugal",
+    "city": "Caparica"
+  },
+  {
+    "id": "portugal-castelo-branco",
+    "country": "Portugal",
+    "city": "Castelo Branco"
+  },
+  {
+    "id": "portugal-coimbra",
+    "country": "Portugal",
+    "city": "Coimbra"
+  },
+  {
+    "id": "portugal-covilhã",
+    "country": "Portugal",
+    "city": "Covilhã"
+  },
+  {
+    "id": "portugal-fafe",
+    "country": "Portugal",
+    "city": "Fafe"
+  },
+  {
+    "id": "portugal-faro",
+    "country": "Portugal",
+    "city": "Faro"
+  },
+  {
+    "id": "portugal-funchal",
+    "country": "Portugal",
+    "city": "Funchal"
+  },
+  {
+    "id": "portugal-guarda",
+    "country": "Portugal",
+    "city": "Guarda"
+  },
+  {
+    "id": "portugal-leiria",
+    "country": "Portugal",
+    "city": "Leiria"
+  },
+  {
+    "id": "portugal-lisbon",
+    "country": "Portugal",
+    "city": "Lisbon"
+  },
+  {
+    "id": "portugal-lusiada",
+    "country": "Portugal",
+    "city": "Lusiada"
+  },
+  {
+    "id": "portugal-madeira",
+    "country": "Portugal",
+    "city": "Madeira"
+  },
+  {
+    "id": "portugal-maia",
+    "country": "Portugal",
+    "city": "Maia"
+  },
+  {
+    "id": "portugal-ponta-delgada",
+    "country": "Portugal",
+    "city": "Ponta Delgada"
+  },
+  {
+    "id": "portugal-porto",
+    "country": "Portugal",
+    "city": "Porto"
+  },
+  {
+    "id": "portugal-vila-real",
+    "country": "Portugal",
+    "city": "Vila Real"
+  },
+  {
+    "id": "portugal-viseu",
+    "country": "Portugal",
+    "city": "Viseu"
+  },
+  {
+    "id": "romania-alba-iulia",
+    "country": "Romania",
+    "city": "Alba Iulia"
+  },
+  {
+    "id": "romania-bucharest",
+    "country": "Romania",
+    "city": "Bucharest"
+  },
+  {
+    "id": "romania-craiova",
+    "country": "Romania",
+    "city": "Craiova"
+  },
+  {
+    "id": "romania-cruj-napoca",
+    "country": "Romania",
+    "city": "Cruj-napoca"
+  },
+  {
+    "id": "romania-iasi",
+    "country": "Romania",
+    "city": "Iasi"
+  },
+  {
+    "id": "romania-napoca",
+    "country": "Romania",
+    "city": "Napoca"
+  },
+  {
+    "id": "romania-sibiu",
+    "country": "Romania",
+    "city": "Sibiu"
+  },
+  {
+    "id": "slovakia-banska",
+    "country": "Slovakia",
+    "city": "Banska"
+  },
+  {
+    "id": "slovakia-presov",
+    "country": "Slovakia",
+    "city": "Presov"
+  },
+  {
+    "id": "slovakia-zilina",
+    "country": "Slovakia",
+    "city": "Zilina"
+  },
+  {
+    "id": "slovenia-koper",
+    "country": "Slovenia",
+    "city": "Koper"
+  },
+  {
+    "id": "slovenia-ljubljana",
+    "country": "Slovenia",
+    "city": "Ljubljana"
+  },
+  {
+    "id": "slovenia-maribor",
+    "country": "Slovenia",
+    "city": "Maribor"
+  },
+  {
+    "id": "slovenia-nova-gorica",
+    "country": "Slovenia",
+    "city": "Nova Gorica"
+  },
+  {
+    "id": "slovenia-novo-mesto",
+    "country": "Slovenia",
+    "city": "Novo Mesto"
+  },
+  {
+    "id": "sweden-malmö",
+    "country": "Sweden",
+    "city": "Malmö"
+  },
+  {
+    "id": "sweden-stockholm",
+    "country": "Sweden",
+    "city": "Stockholm"
+  },
+  {
+    "id": "sweden-trollhättan",
+    "country": "Sweden",
+    "city": "Trollhättan"
+  },
+  {
+    "id": "sweden-umeå",
+    "country": "Sweden",
+    "city": "Umeå"
+  },
+  {
+    "id": "sweden-växjö",
+    "country": "Sweden",
+    "city": "Växjö"
+  },
+  {
+    "id": "switzerland-delémont",
+    "country": "Switzerland",
+    "city": "Delémont"
+  },
+  {
+    "id": "switzerland-lausanne",
+    "country": "Switzerland",
+    "city": "Lausanne"
+  },
+  {
+    "id": "switzerland-wintertur",
+    "country": "Switzerland",
+    "city": "Wintertur"
+  },
+  {
+    "id": "switzerland-zürich",
+    "country": "Switzerland",
+    "city": "Zürich"
+  },
+  {
+    "id": "turkey-adana",
+    "country": "Turkey",
+    "city": "Adana"
+  },
+  {
+    "id": "turkey-ankara",
+    "country": "Turkey",
+    "city": "Ankara"
+  },
+  {
+    "id": "turkey-denizli",
+    "country": "Turkey",
+    "city": "Denizli"
+  },
+  {
+    "id": "turkey-istanbul",
+    "country": "Turkey",
+    "city": "Istanbul"
+  },
+  {
+    "id": "turkey-kilis",
+    "country": "Turkey",
+    "city": "Kilis"
+  },
+  {
+    "id": "turkey-mersin",
+    "country": "Turkey",
+    "city": "Mersin"
+  },
+  {
+    "id": "turkey-ordu",
+    "country": "Turkey",
+    "city": "Ordu"
+  }
+]

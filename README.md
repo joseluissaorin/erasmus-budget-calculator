@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Erasmus Budget Calculator
+
+A comprehensive web application to help Erasmus students plan and manage their study abroad budget. Currently hosted at [erasmus.joseluissaorin.com](https://erasmus.joseluissaorin.com).
+
+![Erasmus Budget Calculator](public/preview.png)
+
+## Features
+
+- 🌍 **City Selection**: Choose from a comprehensive database of European cities
+- 💶 **Dynamic Currency Support**: Automatic currency conversion based on selected destination
+- 🏠 **Accommodation Planning**: Calculate housing costs with options for shared living
+- ✈️ **Travel Cost Management**: Track and plan flight expenses
+- 📊 **Expense Breakdown**: Detailed visualization of monthly expenses
+- 💰 **Scholarship Integration**: Calculate Erasmus+ grant coverage
+- 🔄 **Real-time Updates**: Instant calculations and updates
+- 📱 **Responsive Design**: Works seamlessly on desktop and mobile devices
+- 🔗 **Shareable Budgets**: Generate links to share your budget plan with others
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 18.x or higher
+- npm or yarn package manager
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/erasmus-budget-calculator.git
+   cd erasmus-budget-calculator
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-## Learn More
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technology Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework**: [Next.js](https://nextjs.org/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Charts**: [Recharts](https://recharts.org/)
+- **Icons**: [Lucide Icons](https://lucide.dev/)
+- **State Management**: React Hooks + Context
+- **Data Storage**: IndexedDB for local persistence
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Created by [José Luis Saorín Ferrer](https://github.com/yourusername)
+
+## Acknowledgments
+
+- Thanks to the Erasmus+ Programme for inspiring this project
+- All contributors and users who help improve this tool
