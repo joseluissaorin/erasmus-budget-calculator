@@ -7,7 +7,6 @@ A comprehensive web application to help Erasmus students plan and manage their s
 ## Features
 
 - 🌍 **City Selection**: Choose from a comprehensive database of European cities
-- 💶 **Dynamic Currency Support**: Automatic currency conversion based on selected destination
 - 🏠 **Accommodation Planning**: Calculate housing costs with options for shared living
 - ✈️ **Travel Cost Management**: Track and plan flight expenses
 - 📊 **Expense Breakdown**: Detailed visualization of monthly expenses
@@ -27,7 +26,7 @@ A comprehensive web application to help Erasmus students plan and manage their s
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/erasmus-budget-calculator.git
+   git clone https://github.com/joseluissaorin/erasmus-budget-calculator.git
    cd erasmus-budget-calculator
    ```
 
@@ -67,7 +66,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-Created by [José Luis Saorín Ferrer](https://github.com/yourusername)
+Created by [José Luis Saorín Ferrer](https://github.com/joseluissaorin
 
 ## Acknowledgments
 
