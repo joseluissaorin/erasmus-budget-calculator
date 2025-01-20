@@ -42,3 +42,7 @@ next-env.d.ts
 
 changelog.md
 codebase-knowledge.md
+
+erasmus-calculator.service
+
+start-pnpm.sh

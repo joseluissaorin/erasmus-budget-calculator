@@ -2,10 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Slider } from '@/components/ui/slider';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import {
   PieChart, Pie, Cell, ResponsiveContainer, Tooltip,
   LineChart, Line, XAxis, YAxis, CartesianGrid, Legend
@@ -21,57 +18,92 @@ import { ShareButton } from './share-button';
 import { cn } from '@/lib/utils';
 import { decodeState } from '@/utils/url-state';
 import { getCityById } from '@/utils/city-utils';
+import { createDefaultBudgetParameters } from '@/lib/defaults';
+import { ShareIcon, GithubIcon } from "lucide-react";
 
 const COLORS = ['#FF8042', '#00C49F', '#FFBB28', '#0088FE', '#FF66B2', '#9933FF', '#00B3E6'];
 
-const defaultBudgetParams: BudgetParameters = {
-  accommodation: { amount: 0, deposit: 0, isShared: true, numberOfPeople: 2 },
-  utilities: { amount: 0, isShared: true },
-  groceries: { amount: 0, isShared: true },
-  transport: { amount: 0, isShared: false },
-  entertainment: { amount: 0, isShared: false },
-  dining: { amount: 0, isShared: true },
-  leisure: { amount: 0, isShared: false },
-  other: { amount: 0, isShared: false }
+const defaultBudgetParams: BudgetParameters = createDefaultBudgetParameters();
+
+const defaultScholarship: ScholarshipConfig = {
+  monthlyGrant: 0,
+  maxMonths: 0,
+  travelSupport: 0,
+  additionalSupport: 0
 };
 
 export function BudgetCalculator() {
   const [selectedCity, setSelectedCity] = useState<City | null>(null);
   const [budgetParams, setBudgetParams] = useState<BudgetParameters>(defaultBudgetParams);
-  const [scholarship, setScholarship] = useState<ScholarshipConfig>({
-    monthlyGrant: 0,
-    maxMonths: 0,
-    travelSupport: 0
-  });
+  const [scholarship, setScholarship] = useState<ScholarshipConfig>(defaultScholarship);
   const [flights, setFlights] = useState<Flight[]>([]);
   const [stayDuration, setStayDuration] = useState(6);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const { rates, loading: ratesLoading } = useExchangeRates();
 
   // Load shared state from URL if present
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const sharedState = params.get('s');
-    
-    if (sharedState) {
+    const loadState = () => {
+      setIsLoading(true);
+      setError(null);
+
       try {
-        const decoded = decodeState(sharedState);
-        // Find the city by ID
-        // Note: You'll need to implement this function to get the city by ID
-        const city = getCityById(decoded.cityId);
-        if (city) {
-          setSelectedCity(city);
-          setBudgetParams(decoded.budgetParams);
-          setFlights(decoded.flights);
-          setScholarship(decoded.scholarship);
-          setStayDuration(decoded.stayDuration);
+        const params = new URLSearchParams(window.location.search);
+        const sharedState = params.get('s');
+        
+        if (!sharedState) {
+          setIsLoading(false);
+          return;
         }
+
+        const decoded = decodeState(sharedState);
+        if (!decoded) {
+          throw new Error('Invalid shared state format');
+        }
+
+        const city = getCityById(decoded.cityId);
+        if (!city) {
+          throw new Error('Invalid city ID in shared state');
+        }
+
+        // Validate budget parameters
+        if (!decoded.budgetParams) {
+          throw new Error('Missing budget parameters in shared state');
+        }
+
+        // Validate scholarship config
+        if (!decoded.scholarship) {
+          throw new Error('Missing scholarship configuration in shared state');
+        }
+
+        // Validate stay duration
+        if (typeof decoded.stayDuration !== 'number' || decoded.stayDuration <= 0) {
+          throw new Error('Invalid stay duration in shared state');
+        }
+
+        // Update all state
+        setSelectedCity(city);
+        setBudgetParams(decoded.budgetParams);
+        setFlights(decoded.flights || []);
+        setScholarship(decoded.scholarship);
+        setStayDuration(decoded.stayDuration);
+
       } catch (err) {
         console.error('Failed to load shared state:', err);
+        setError(err instanceof Error ? err.message : 'Failed to load shared state');
+        // Reset to defaults
+        setBudgetParams(defaultBudgetParams);
+        setScholarship(defaultScholarship);
+        setFlights([]);
+        setStayDuration(6);
+      } finally {
+        setIsLoading(false);
       }
-    }
-    setIsLoading(false);
+    };
+
+    loadState();
   }, []);
 
   // Calculate totals and update them when any dependency changes
@@ -119,7 +151,14 @@ export function BudgetCalculator() {
   );
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-900 mx-auto"></div>
+          <p className="text-purple-900">Loading your budget configuration...</p>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -136,6 +175,12 @@ export function BudgetCalculator() {
             </CardDescription>
           </CardHeader>
         </Card>
+
+        {error && (
+          <Alert variant="destructive">
+            <AlertDescription>{error}</AlertDescription>
+          </Alert>
+        )}
 
         {renderSection(1, "Select Your Destination", "Choose the city where you'll be studying", 
           <CitySelector
@@ -189,7 +234,17 @@ export function BudgetCalculator() {
           <p className="flex items-center justify-center gap-1">
             made with <span className="text-red-500">❤️</span> by saorin
           </p>
-          <p className="text-sm mt-1">© 2025</p>
+          <div className="flex items-center justify-center gap-4 mt-1">
+            <p className="text-sm">© 2025</p>
+            <a 
+              href="https://github.com/joseluissaorin/erasmus-budget-calculator" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              <GithubIcon className="w-5 h-5" />
+            </a>
+          </div>
         </footer>
       </div>
     </div>

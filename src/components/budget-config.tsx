@@ -45,10 +45,7 @@ export function BudgetConfig({
   cityData,
   preferredCurrency
 }: BudgetConfigProps) {
-  const [params, setParams] = useState<BudgetParameters>(() => ({
-    ...createDefaultBudgetParameters(),
-    ...initialParams,
-  }));
+  const [params, setParams] = useState<BudgetParameters>(initialParams);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [retryCount, setRetryCount] = useState(0);
@@ -56,6 +53,14 @@ export function BudgetConfig({
 
   const loadPreferences = useCallback(async (retryAttempt = 0) => {
     if (!cityData) return;
+    
+    // If we have initial params (from URL), don't load from local storage
+    if (Object.values(initialParams.accommodation).some(v => v !== 0) ||
+        Object.values(initialParams).some(param => 
+          param.amount !== 0 || param.isShared !== false
+        )) {
+      return;
+    }
     
     setLoading(true);
     setError(null);
@@ -82,7 +87,7 @@ export function BudgetConfig({
     } finally {
       setLoading(false);
     }
-  }, [cityData, onChange, getPreference]);
+  }, [cityData, onChange, getPreference, initialParams]);
 
   const savePreferences = useCallback(async (newParams: BudgetParameters, retryAttempt = 0) => {
     if (!cityData) return;
@@ -115,8 +120,9 @@ export function BudgetConfig({
   }, [cityData, savePreference]);
 
   useEffect(() => {
+    setParams(initialParams);
     loadPreferences();
-  }, [cityData, loadPreferences]);
+  }, [cityData, loadPreferences, initialParams]);
 
   const handleParamChange = (
     category: keyof BudgetParameters,

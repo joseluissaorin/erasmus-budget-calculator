@@ -1,147 +1,249 @@
 import { BudgetParameters, ScholarshipConfig, Flight, City } from '../types';
+import * as LZString from 'lz-string';
 
-// Convert number to base36 for shorter strings
-const encodeNumber = (num: number): string => Math.round(num * 100).toString(36);
-const decodeNumber = (str: string): number => parseInt(str, 36) / 100;
+// Convert number to base64 for shorter strings
+const encodeNumber = (num: number): string => {
+  const buffer = new ArrayBuffer(8);
+  new Float64Array(buffer)[0] = num;
+  return btoa(String.fromCharCode(...new Uint8Array(buffer)));
+};
 
-// Encode boolean as 0/1
-const encodeBoolean = (bool: boolean): string => bool ? '1' : '0';
-const decodeBoolean = (str: string): boolean => str === '1';
+const decodeNumber = (str: string): number => {
+  try {
+    const binary = atob(str);
+    const buffer = new ArrayBuffer(8);
+    const view = new Uint8Array(buffer);
+    for (let i = 0; i < binary.length; i++) {
+      view[i] = binary.charCodeAt(i);
+    }
+    return new Float64Array(buffer)[0];
+  } catch (error) {
+    console.error('Error decoding number:', error);
+    return 0;
+  }
+};
+
+// Encode boolean as 0/1 in base64
+const encodeBoolean = (bool: boolean): string => btoa(bool ? '1' : '0');
+const decodeBoolean = (str: string): boolean => {
+  try {
+    return atob(str) === '1';
+  } catch (error) {
+    console.error('Error decoding boolean:', error);
+    return false;
+  }
+};
+
+// Encode string with base64 and compression
+const encodeString = (str: string): string => {
+  try {
+    return LZString.compressToBase64(encodeURIComponent(str));
+  } catch (error) {
+    console.error('Error encoding string:', error);
+    return '';
+  }
+};
+
+const decodeString = (str: string): string => {
+  try {
+    return decodeURIComponent(LZString.decompressFromBase64(str) || '');
+  } catch (error) {
+    console.error('Error decoding string:', error);
+    return '';
+  }
+};
+
+// Encode expense parameter
+const encodeExpenseParam = (param: { amount: number; isShared: boolean }): string => {
+  return [
+    encodeNumber(param.amount),
+    encodeBoolean(param.isShared)
+  ].join('|');
+};
+
+// Decode expense parameter
+const decodeExpenseParam = (encoded: string): { amount: number; isShared: boolean } => {
+  const [amount, isShared] = encoded.split('|');
+  return {
+    amount: decodeNumber(amount),
+    isShared: decodeBoolean(isShared)
+  };
+};
 
 export const encodeBudgetParams = (params: BudgetParameters): string => {
-  const { accommodation, utilities, groceries, transport, entertainment, dining, leisure, other } = params;
-  return [
-    encodeNumber(accommodation.amount),
-    encodeNumber(accommodation.deposit),
-    encodeBoolean(accommodation.isShared),
-    accommodation.numberOfPeople.toString(36),
-    encodeNumber(utilities.amount),
-    encodeBoolean(utilities.isShared),
-    encodeNumber(groceries.amount),
-    encodeBoolean(groceries.isShared),
-    encodeNumber(transport.amount),
-    encodeBoolean(transport.isShared),
-    encodeNumber(entertainment.amount),
-    encodeBoolean(entertainment.isShared),
-    encodeNumber(dining.amount),
-    encodeBoolean(dining.isShared),
-    encodeNumber(leisure.amount),
-    encodeBoolean(leisure.isShared),
-    encodeNumber(other.amount),
-    encodeBoolean(other.isShared)
-  ].join(',');
+  try {
+    const encoded = {
+      accommodation: {
+        amount: encodeNumber(params.accommodation.amount),
+        deposit: encodeNumber(params.accommodation.deposit),
+        isShared: encodeBoolean(params.accommodation.isShared),
+        numberOfPeople: encodeNumber(params.accommodation.numberOfPeople)
+      },
+      utilities: encodeExpenseParam(params.utilities),
+      groceries: encodeExpenseParam(params.groceries),
+      transport: encodeExpenseParam(params.transport),
+      entertainment: encodeExpenseParam(params.entertainment),
+      dining: encodeExpenseParam(params.dining),
+      leisure: encodeExpenseParam(params.leisure),
+      other: encodeExpenseParam(params.other)
+    };
+    
+    return LZString.compressToBase64(JSON.stringify(encoded));
+  } catch (error) {
+    console.error('Error encoding budget parameters:', error);
+    throw new Error('Failed to encode budget parameters');
+  }
 };
 
 export const decodeBudgetParams = (encoded: string): BudgetParameters => {
-  const parts = encoded.split(',');
-  return {
-    accommodation: {
-      amount: decodeNumber(parts[0]),
-      deposit: decodeNumber(parts[1]),
-      isShared: decodeBoolean(parts[2]),
-      numberOfPeople: parseInt(parts[3], 36)
-    },
-    utilities: {
-      amount: decodeNumber(parts[4]),
-      isShared: decodeBoolean(parts[5])
-    },
-    groceries: {
-      amount: decodeNumber(parts[6]),
-      isShared: decodeBoolean(parts[7])
-    },
-    transport: {
-      amount: decodeNumber(parts[8]),
-      isShared: decodeBoolean(parts[9])
-    },
-    entertainment: {
-      amount: decodeNumber(parts[10]),
-      isShared: decodeBoolean(parts[11])
-    },
-    dining: {
-      amount: decodeNumber(parts[12]),
-      isShared: decodeBoolean(parts[13])
-    },
-    leisure: {
-      amount: decodeNumber(parts[14]),
-      isShared: decodeBoolean(parts[15])
-    },
-    other: {
-      amount: decodeNumber(parts[16]),
-      isShared: decodeBoolean(parts[17])
-    }
-  };
+  try {
+    const decoded = JSON.parse(LZString.decompressFromBase64(encoded) || '{}');
+    
+    return {
+      accommodation: {
+        amount: decodeNumber(decoded.accommodation.amount),
+        deposit: decodeNumber(decoded.accommodation.deposit),
+        isShared: decodeBoolean(decoded.accommodation.isShared),
+        numberOfPeople: decodeNumber(decoded.accommodation.numberOfPeople)
+      },
+      utilities: decodeExpenseParam(decoded.utilities),
+      groceries: decodeExpenseParam(decoded.groceries),
+      transport: decodeExpenseParam(decoded.transport),
+      entertainment: decodeExpenseParam(decoded.entertainment),
+      dining: decodeExpenseParam(decoded.dining),
+      leisure: decodeExpenseParam(decoded.leisure),
+      other: decodeExpenseParam(decoded.other)
+    };
+  } catch (error) {
+    console.error('Error decoding budget parameters:', error);
+    return {
+      accommodation: { amount: 0, deposit: 0, isShared: false, numberOfPeople: 1 },
+      utilities: { amount: 0, isShared: false },
+      groceries: { amount: 0, isShared: false },
+      transport: { amount: 0, isShared: false },
+      entertainment: { amount: 0, isShared: false },
+      dining: { amount: 0, isShared: false },
+      leisure: { amount: 0, isShared: false },
+      other: { amount: 0, isShared: false }
+    };
+  }
 };
 
 export const encodeFlights = (flights: Flight[]): string => {
-  return flights.map(f => [
-    f.id,
-    encodeNumber(f.price),
-    f.description,
-    f.date,
-    encodeBoolean(f.isShared)
-  ].join('|')).join(';');
+  try {
+    const encoded = flights.map(f => ({
+      id: encodeString(f.id),
+      price: encodeNumber(f.price),
+      description: encodeString(f.description),
+      date: encodeString(f.date),
+      isShared: encodeBoolean(f.isShared)
+    }));
+    
+    return LZString.compressToBase64(JSON.stringify(encoded));
+  } catch (error) {
+    console.error('Error encoding flights:', error);
+    throw new Error('Failed to encode flights');
+  }
 };
 
 export const decodeFlights = (encoded: string): Flight[] => {
-  if (!encoded) return [];
-  return encoded.split(';').map(f => {
-    const [id, price, description, date, isShared] = f.split('|');
-    return {
-      id,
-      price: decodeNumber(price),
-      description,
-      date,
-      isShared: decodeBoolean(isShared)
-    };
-  });
+  try {
+    if (!encoded) return [];
+    
+    const decoded = JSON.parse(LZString.decompressFromBase64(encoded) || '[]');
+    return decoded.map((f: any) => ({
+      id: decodeString(f.id),
+      price: decodeNumber(f.price),
+      description: decodeString(f.description),
+      date: decodeString(f.date),
+      isShared: decodeBoolean(f.isShared)
+    }));
+  } catch (error) {
+    console.error('Error decoding flights:', error);
+    return [];
+  }
 };
 
 export const encodeScholarship = (scholarship: ScholarshipConfig): string => {
-  return [
-    encodeNumber(scholarship.monthlyGrant),
-    scholarship.maxMonths.toString(36),
-    encodeNumber(scholarship.travelSupport)
-  ].join(',');
+  try {
+    const encoded = {
+      monthlyGrant: encodeNumber(scholarship.monthlyGrant),
+      maxMonths: encodeNumber(scholarship.maxMonths),
+      travelSupport: encodeNumber(scholarship.travelSupport),
+      additionalSupport: scholarship.additionalSupport ? encodeNumber(scholarship.additionalSupport) : null
+    };
+    
+    return LZString.compressToBase64(JSON.stringify(encoded));
+  } catch (error) {
+    console.error('Error encoding scholarship:', error);
+    throw new Error('Failed to encode scholarship');
+  }
 };
 
 export const decodeScholarship = (encoded: string): ScholarshipConfig => {
-  const [monthlyGrant, maxMonths, travelSupport] = encoded.split(',');
-  return {
-    monthlyGrant: decodeNumber(monthlyGrant),
-    maxMonths: parseInt(maxMonths, 36),
-    travelSupport: decodeNumber(travelSupport)
-  };
+  try {
+    const decoded = JSON.parse(LZString.decompressFromBase64(encoded) || '{}');
+    
+    return {
+      monthlyGrant: decodeNumber(decoded.monthlyGrant),
+      maxMonths: decodeNumber(decoded.maxMonths),
+      travelSupport: decodeNumber(decoded.travelSupport),
+      additionalSupport: decoded.additionalSupport ? decodeNumber(decoded.additionalSupport) : 0
+    };
+  } catch (error) {
+    console.error('Error decoding scholarship:', error);
+    return {
+      monthlyGrant: 0,
+      maxMonths: 0,
+      travelSupport: 0,
+      additionalSupport: 0
+    };
+  }
 };
 
-export const encodeState = (
-  city: City,
-  stayDuration: number,
-  budgetParams: BudgetParameters,
-  flights: Flight[],
-  scholarship: ScholarshipConfig
-): string => {
-  return [
-    city.id,
-    stayDuration.toString(36),
-    encodeBudgetParams(budgetParams),
-    encodeFlights(flights),
-    encodeScholarship(scholarship)
-  ].join('~');
-};
-
-export const decodeState = (encoded: string): {
+export interface SharedState {
   cityId: string;
-  stayDuration: number;
   budgetParams: BudgetParameters;
   flights: Flight[];
   scholarship: ScholarshipConfig;
-} => {
-  const [cityId, stayDuration, budgetParams, flights, scholarship] = encoded.split('~');
-  return {
-    cityId,
-    stayDuration: parseInt(stayDuration, 36),
-    budgetParams: decodeBudgetParams(budgetParams),
-    flights: decodeFlights(flights),
-    scholarship: decodeScholarship(scholarship)
-  };
+  stayDuration: number;
+}
+
+export const encodeState = (state: SharedState): string => {
+  try {
+    const encoded = {
+      c: encodeString(state.cityId),
+      b: encodeBudgetParams(state.budgetParams),
+      f: encodeFlights(state.flights),
+      s: encodeScholarship(state.scholarship),
+      d: encodeNumber(state.stayDuration)
+    };
+    
+    return LZString.compressToEncodedURIComponent(JSON.stringify(encoded));
+  } catch (error) {
+    console.error('Error encoding state:', error);
+    throw new Error('Failed to encode state');
+  }
+};
+
+export const decodeState = (encoded: string): SharedState | null => {
+  try {
+    if (!encoded) return null;
+    
+    const jsonStr = LZString.decompressFromEncodedURIComponent(encoded);
+    if (!jsonStr) return null;
+    
+    const decoded = JSON.parse(jsonStr);
+    
+    return {
+      cityId: decodeString(decoded.c),
+      budgetParams: decodeBudgetParams(decoded.b),
+      flights: decodeFlights(decoded.f),
+      scholarship: decodeScholarship(decoded.s),
+      stayDuration: decodeNumber(decoded.d)
+    };
+  } catch (error) {
+    console.error('Error decoding state:', error);
+    return null;
+  }
 }; 
