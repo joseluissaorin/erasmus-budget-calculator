@@ -2,7 +2,7 @@
 
 A comprehensive web application to help Erasmus students plan and manage their study abroad budget. Currently hosted at [erasmus.joseluissaorin.com](https://erasmus.joseluissaorin.com) and at [erasmusbudget.com](https://www.erasmusbudget.com).
 
-![Erasmus Budget Calculator](public/preview.png)
+![Erasmus Budget Calculator](public/erasmus-budget-preview.gif)
 
 ## Features
 
