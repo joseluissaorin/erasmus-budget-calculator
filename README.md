@@ -56,6 +56,29 @@ A comprehensive web application to help Erasmus students plan and manage their s
 - **State Management**: React Hooks + Context
 - **Data Storage**: IndexedDB for local persistence
 
+## Configuration
+
+### Environment Variables
+
+The application supports the following environment variables:
+
+- `NEXT_PUBLIC_BASE_URL`: (Optional) Override the base URL for shortened links. If not set, the application will automatically detect the domain from the request headers.
+
+You can create a `.env.local` file in the root of the project with these variables, for example:
+
+```
+# .env.local example
+NEXT_PUBLIC_BASE_URL=https://erasmusbudget.com
+```
+
+### Multiple Domain Support
+
+The application supports both domains:
+- erasmus.joseluissaorin.com
+- erasmusbudget.com
+
+When using the share functionality, the application will automatically detect which domain is being used and generate links with the correct domain. This ensures that shared links always point to the same domain from which they were generated.
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.

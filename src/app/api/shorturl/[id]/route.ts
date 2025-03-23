@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getUrlById } from '@/lib/url-store';
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+// Simple approach: extracting id from path
+export async function GET(req: NextRequest) {
   try {
-    const { id } = params;
+    // Extract the id from the URL path
+    const path = req.nextUrl.pathname;
+    const id = path.split('/').pop() || '';
     
     if (!id) {
       return NextResponse.json(
